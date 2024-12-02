@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <button id="themeToggle">Toggle Theme</button>
+        </nav>
+    </header>
+    <main>
+        <section id="intro">
+            <h2>About Me</h2>
+            <p id="aboutText">Hello! My name is Lance Aron P. Lozanta, 23 years from Isok II, Boac, Marinduque. When I'm not engaged in my professional pursuits, I find solace and joy in a diverse array of hobbies. Whether it's the meditative strokes of a pencil on paper as I immerse myself in the world of drawing, the adrenaline-fueled adventures of virtual realms in video games where I can unleash my competitive spirit, or the invigorating sensation of wind against my face as I pedal through scenic landscapes on my bike, each activity offers a unique escape and source of fulfillment in my life.</p>
+            <textarea id="aboutInput" placeholder="Update your bio..."></textarea>
+            <button id="updateBio">Update Bio</button>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <input id="filterInput" type="text" placeholder="Filter projects..." />
+            <div id="projectList">
+                <!-- Projects will be dynamically loaded here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Lance Aron P. Lozanta</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav button {
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+textarea, input {
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
+    max-width: 500px;
+    padding: 0.5rem;
+}
+
+#projectList div {
+    border: 1px solid #ddd;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    transition: transform 0.2s;
+}
+
+#projectList div:hover {
+    transform: scale(1.02);
+}
+
+/* Dark Theme */
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+body.dark header {
+    background: #444;
+}
