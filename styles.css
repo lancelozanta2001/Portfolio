@@ -1,0 +1,294 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #03002c;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+
+header .logo img {
+  height: 40px;
+}
+
+header .navbar {
+  display: flex;
+}
+
+header .navbar a {
+  color: #d390fd;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+main {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 80px;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+main section {
+  display: none; /* Hide all sections initially */
+}
+
+main section.active {
+  display: block; /* Show only the active section */
+}
+
+.profile .profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.text p {
+  font-size: 18px;
+}
+
+.text p, .text h1 {
+  color: #B5B5B5;
+}
+
+/*About Section*/
+.about {
+  margin-top: 40px;
+  background-color: #000101;
+  padding: 30px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+.about h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #d390fd;
+}
+
+.about p {
+  font-size: 18px;
+  color: #B5B5B5;
+  line-height: 1.6;
+}
+
+.about strong {
+  color: #fff;
+}
+
+/*Portfolio Section*/
+.portfolio {
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+.portfolio h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #d390fd;
+}
+
+.portfolio-item {
+  background-color: #000101;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.portfolio-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item p {
+  font-size: 16px;
+  color: #B5B5B5;
+  margin-bottom: 10px;
+}
+
+.portfolio-item a {
+  color: #d390fd;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*Socials Section*/
+.socials {
+  margin-top: 40px;
+  background-color: #000101;
+  padding: 30px;
+  border-radius: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 1s forwards;
+}
+
+.socials h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #d390fd;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-link {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: #d390fd;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/*Mobile*/
+@media screen and (max-width: 768px) {
+  body {
+    padding: 20px;
+    height: auto;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header .navbar {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header .navbar a {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .profile .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+
+  .text h1 {
+    font-size: 28px;
+  }
+
+  .text p {
+    font-size: 16px;
+  }
+
+  .about h2,
+  .portfolio h2,
+  .socials h2 {
+    font-size: 24px;
+  }
+
+  .portfolio-item {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .portfolio-item h3 {
+    font-size: 20px;
+  }
+
+  .portfolio-item p {
+    font-size: 14px;
+  }
+
+  .social-links {
+    flex-direction: column;
+  }
+
+  .social-link {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .text h1 {
+    font-size: 24px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .profile .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .portfolio-item {
+    padding: 10px;
+  }
+
+  .portfolio-item h3 {
+    font-size: 18px;
+  }
+
+  .portfolio-item p {
+    font-size: 12px;
+  }
+}
+
